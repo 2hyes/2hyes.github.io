@@ -4,7 +4,7 @@
 #### I want to be a `DATA SCIENTIST`. 
 
 
-I have developed a **web** portfolio, with HTML & CSS
+I have developed a **web** portfolio, with HTML & CSS -->
 [portfolio LINK](https://2hyes.github.io/portfolio_HYESEUNGLEE/index.html#)
 
 
@@ -36,7 +36,7 @@ I have developed a **web** portfolio, with HTML & CSS
 #### `데이터 사이언티스트`가 되기위해 노력하고 공부해온 나의 기록
 
 
-HTML, CSS으로 웹 포트폴리오를 개발해보았습니다. 
+HTML, CSS으로 웹 포트폴리오를 개발해보았습니다. -->
 [포트폴리오 주소](https://2hyes.github.io/portfolio_HYESEUNGLEE/index.html#)
 
 
