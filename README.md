@@ -13,6 +13,7 @@ I have developed a **web** portfolio, with HTML & CSS -->
 * COMPUTER SCIENCE: 
     * DATA SCIENCE 
         * The 17th SAS Analytics Championship **Certificate**
+        * Project: Defect detection for image dataset 
         * studying for ADsP
         * Kaggle titanic competition (1404 / 16274)
         * Project: predicting wine quality 
@@ -45,6 +46,7 @@ HTML, CSS으로 웹 포트폴리오를 개발해보았습니다. -->
 * COMPUTER SCIENCE: 
     * DATA SCIENCE 
         * 제 17회 SAS분석챔피언십 입선
+        * 이미지 데이터셋을 이용한 결함감지 프로젝트
         * ADsP(데이터분석준전문가) 자격증 준비
         * Kaggle titanic competition 참가 (1404 / 16274명)
         * 와인 품질 예측 프로젝트
