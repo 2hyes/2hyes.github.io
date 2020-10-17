@@ -5,7 +5,7 @@
 
 
 I have developed a **web** portfolio, with HTML & CSS -->
-[portfolio LINK](https://2hyes.github.io/portfolio_HYESEUNGLEE/index.html#)
+[portfolio LINK](https://2hyes.github.io/)
 
 
 * INTRO: A short introduction and personal competency. 
@@ -38,7 +38,7 @@ I have developed a **web** portfolio, with HTML & CSS -->
 
 
 HTML, CSS으로 웹 포트폴리오를 개발해보았습니다. -->
-[포트폴리오 주소](https://2hyes.github.io/portfolio_HYESEUNGLEE/index.html#)
+[포트폴리오 주소](https://2hyes.github.io/)
 
 
 * INTRO: 짧은 소개글 및 개인 역량 작성
