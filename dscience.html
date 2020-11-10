@@ -153,6 +153,7 @@
 				<article id="cli">
                		<h3>3. Project: 뉴스기사 수와 포털 트렌드를 활용한 주간 소비자 심리 지수 개발</h3>
 					   <p><i>2020.09 ~ </i>진행중  <a href="https://github.com/2hyes/CLI-development" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
+					   </br>
 						불경기 상황에서 경제 정책 시행에의 빠른 피드백과 탄력적 대응을 위한 단기 경제지표를 제시</p>
 						
 						주간 데이터들을 수집하여, 월간 경제 지표인 소비자심리지수를 예측한다.<br>
@@ -179,8 +180,9 @@
 				<article id="cyberattack">
 					<h3>4. Project: 사이버공격 패턴 사전 감지 프로그램</h3>
 					<p><i>2020.08 ~ 2020.09 </i><a href="https://github.com/2hyes/security_ml" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
-					사이버 공격 로그 데이터(UNSW-NB15)로 인공신경망을 학습시켜, <br>
-					웹 서버를 통해 iOS앱으로 로그 정보에 대한 공격여부 및 공격 정보 예측 결과 시각화</p>
+					</br>
+						사이버 공격 로그 데이터(UNSW-NB15)로 인공신경망을 학습시켜, <br>
+						웹 서버를 통해 iOS앱으로 로그 정보에 대한 공격여부 및 공격 정보 예측 결과 시각화</p>
 					
 					<h4>데이터 전처리</h4>
 					<ul>
@@ -191,12 +193,12 @@
 					<h4>모델링 과정</h4>
 					<ul>
 						<li>decision tree</li>
-						<li>MLP(인공신경망)</li>
+						<li>MLP(인공신경망): training accuracy = 0.85, test accuracy = 0.823</li>
 						<li>AdaBoost</li>
 						<li>SVC</li>
 						<li>GaussianNB</li>
 					</ul>
-					training accuracy = 0.85, test accuracy = 0.823<br>
+					
 					activation ='relu’, solver = 'adam’, alpha = 1e-4, H = (70, 58, 77, 95, 57), max_iter=10000<br>
 					를 파라미터로 갖는 MLP를 최종 모델로 선택한다.<br>
 					선택된 모델을 Flask server에 배포하여, input 로그 데이터에 대해 예측 결과를 반환한다. 
