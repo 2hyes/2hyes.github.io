@@ -27,7 +27,7 @@
 				<ol>
 					<li><a href="#sas">제 17회 SAS분석 챔피언십 입선</a></li>
 					<li><a href="#fabric">Project: Small Fabric Database for Defect Detection</a></li>
-					<li><a href="#cli">Project: 부정적 경제 키워드를 포함한 뉴스기사 수와 포털 트렌드 검색량을 활용한 주간 소비자 심리 지수 개발</a></li>
+					<li><a href="#cli">Project: 뉴스기사 수와 포털 트렌드를 활용한 주간 소비자 심리 지수 개발</a></li>
 					<li><a href="#cyberattack">Project: 사이버공격 패턴 사전 감지 프로그램</a></li>
 					<li><a href="#titanic">Project: Kaggle titanic competition 참가</a></li>
 					<li><a href="#wine">Project: Wine data를 활용한 와인 품질 예측</a></li>
@@ -38,98 +38,185 @@
 					<h3>1. 제 17회 SAS분석 챔피언십 입선</h3>
 					<p><i>2019.09.19</i><br>
 					롯데홈쇼핑 방송의 판매 실적 예측 및 판매 증대를 위한 데이터 기반의 방안 제시</p>
-					<h4>전처리 과정</h4>
-					<p>- 외부 변수: 날짜 → 날씨API, 경제상황(CPI, KOSPI, 고용률)<br>
-					- 활용: 시계열 분석 (moving average)<br>
-					- 파생 변수: 날짜 → 요일, 월, 연도, 휴일<br></p>
-					<h4>모델링 과정</h4>
-					<p>- 활용: 예측모델- 포레스트(모델링-채택), 그래디언트 부스팅,<br>
-					앙상블, 의사결정트리(스코어링-채택), ANN, 선형회귀</p>
-
-					데이터를 기반으로 미래 매출액을 예측하고, 매출 증진을 위한 방안을 제시하는 것이 프로젝트의 목표였다. <br>
+					데이터를 기반으로 미래 매출액을 예측하고, 매출 증진을 위한 방안을 제시하는 것이 프로젝트의 목표다. <br>
 					초기 데이터로 주어진 것은 날짜 데이터 정보뿐이었기 때문에, 인사이트를 얻기 힘들었다. <br>
 					따라서 파생/외부변수를 발굴하고자 했고, 매출에 영향을 미치는 요인에 대해 고민해보았다.<br> 
-					소득이 증가하면 소비가 함께 증가한다는 기본 경제 개념을 전제로, 주가 상승의 시기를 파악하여 소비자 물가지수, 코스피지수, 고용률을 변수로 활용했다. <br>
+					소득이 증가하면 소비가 함께 증가한다는 기본 경제 개념을 전제로, <br>
+					주가 상승의 시기를 파악하여 소비자 물가지수, 코스피지수, 고용률을 변수로 활용했다. <br>
 					시계열 분석을 통해 해당 변수들의 moving average들을 활용했으며, 또 날씨, 휴일 정보를 파생변수로 활용했다.<br>
 					모델링 및 예측단계에서는 다양한 모델들을 활용해서, 순 주문 수량을 예측하는 데에 가장 잘 적합된 랜덤 포레스트를 활용했다.
 					<br><br>
-					역할: 
+					<h4>전처리 과정</h4>
+					<ul>
+						<li>외부 변수: 날짜 → 날씨API, 경제상황(CPI, KOSPI, 고용률)</li>
+						<li>활용: 시계열 분석 (moving average)</li>
+						<li>파생 변수: 날짜 → 요일, 월, 연도, 휴일</li>
+					</ul>
+
+					<h4>모델링 과정</h4>
+					<ul>
+						<li><p>포레스트(모델링-채택), 그래디언트 부스팅,<br>
+							앙상블, 의사결정트리(스코어링-채택), ANN, 선형회귀</p></li>
+					</ul>
+					
+					<h4>Future Job</h4>
+					<ul>
+						<li><p>
+							거시적인 지표들을 활용하여 경제상황을 판단하여 예측에의 정밀도가 떨어졌다. <br>
+							따라서 미시적인 지표를 활용하여 모형의 성능을 높이고자 한다. 
+						</p></li>
+						
+						<li><p>
+							참가 당시 Neural Network에 대한 사전 지식이 없었기에, <br>
+							hyperparameter들을 조정하며 모델 생성을 해보지 못했다. <br>
+							hyperparameter의 조절을 통해 다양한 모델들을 적합시켜보고자 한다. 
+						</p></li>
+					</ul>
+					
+					<h4>프로젝트에서의 역할</h4>
 					<ul>
 						<li>경제 지표 데이터를 외부변수로 생성하여, moving average를 적용</li>
-						<li>예측 모델을 생성</li>
-					</ul> 
-					<br>
-					future job: 
-					<ul>
-						<li>거시적인 지표들을 활용하여 경제상황을 판단하여 예측에의 정밀도가 떨어졌다. 따라서 미시적인 지표를 활용하여 모형의 성능을 높이고자 한다. </li>
-						<li>참가 당시 Neural Network에 대한 사전 지식이 없었기에, hyperparameter들을 조정하며 모델 생성을 해보지 못했다. hyperparameter의 조절을 통해 다양한 모델들을 적합시켜보고자 한다. </li>
-					</ul>		
-
+						<li>예측 모델 생성 및 학습</li>
+					</ul>
 				</article>
 
 				<br><br>
 
 				<article id="fabric">
 					<h3>2. Project: Small Fabric Database for Defect Detection</h3>
-					<p><i>2020.03 ~ 2020.06</i></br>
+					<p><i>2020.03 ~ 2020.06  </i><a href="https://github.com/2hyes/Fabric-Defect-Detector" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
+					</br>
 						소량의 정상 섬유 이미지 데이터로 불량 섬유를 검출해낼 수 있는 딥러닝 학습 모델 제시하는 프로젝트</p>
-						<h4>전처리 과정</h4>
-						<p> 
-						- 
-						</p>
-						<h4>모델링 과정</h4>
-						<p>- 활용: Autoencoder
-							
-						</p>
-	
-
-						AITEX사에서 제공하는 섬유 이미지 데이터를 활용했다. supervised learning을 위해 라벨링 작업 혹은 불량데이터가 충분히 쌓일 때까지 기다리거나, 임의로 불량데이터를 생성하는 것이 비효율적이라 판단했다. 따라서 적은 양의 정상데이터만 가지고 unsupervised learning 방법 중 하나인 autoencoder를 학습시키는 방법은 택했다. 이때 적은 양의 데이터라는 챌린지를 극복하기 위해, 고화질의 이미지를 64 * 64 패치로 잘라내어 학습 데이터를 크게 증가시켰다. 
-
-						<br><br>
+						<p>
+						AITEX사에서 제공하는 섬유 이미지 데이터를 활용했다. <br>
+						supervised learning을 위해 라벨링 작업을 하거나 임의로 불량데이터를 생성하는 것이 비효율적이라 판단했다. <br>
+						해당 프로젝트에서는 두 개의 챌린지가 존재하며, 첫번째로는 데이터 양이 적다는 것, <br>
+						두번째로는 정상 데이터만으로 모델을 학습시키는 것이다. <br>
+						챌린지 극복을 위해 고화질의 이미지를 64 * 64 패치로 잘라내어 학습 데이터를 크게 증가시켰고,<br>
+						정상 데이터만을 가지고 unsupervised learning model(Autoencoder)을 학습시키는 방법을 택했다. <br>
 						
-						future job: 
+						원래의 패치와 Autoencoder 모델로 얻은 재구성된 패치를 elementwise하게 비교하여 MSE loss를 계산하고, <br>
+						해당 loss가 사전 설정한 threshold보다 높다면 결함으로 배정한다. <br>
+						이미지의 모든 패치들의 결함여부를 판정하여, 결함 패치의 개수가 사전 설정한 threshold보다 높다면,<br>
+						해당 이미지를 결함으로 판단한다.<br>
+						validate set에 대한 f1-score = 0.88, test set에 대한 f1-score = 0.81이다.
+						</p>
+						
+						<h4>전처리 과정</h4>
 						<ul>
-							<li> </li>
-							<li> </li> 
+							<li><p>Train, validate, test dataset 분할<br>
+								: 정상 이미지만으로 모델을 학습하므로, 트레이닝셋에는 결함 데이터가 존재하지않도록 했다. <br>
+								결론적으로, 정상데이터를 train:val:test = 6:2:2로, 결함데이터를 val:test = 1:1로 분할했다.
+							</p></li>
+							<li><p>256 x 4096 사이즈의 이미지를 64 x 64로 패치화<br>
+								: 데이터 양이 적은 챌린지 극복하기 위해, 하나의 섬유 이미지를 172개의 패치로 잘라서 활용했다.<br>
+								결론적으로 85개의 트레이닝셋을 14,620개로 크게 증가시켰다. 
+							</p></li>
+						</ul>		
+	
+						<h4>모델링 과정</h4>
+						<ul>
+							<li>Autoencoder with linear dimensional reduction</li>
+							- encoder: 64x64 패치를 linear function을 통해 4x4로 차원 축소하여 특징 추출<br>
+							- decoder: 다시 64x64 패치로 복원<br>
+							<li>Autoencoder with nonlinear(ReLU) dimensional reduction</li>
+							- encoder: 64x64 패치를 ReLU activation function을 통해 4x4로 차원 축소하여 특징 추출<br>
+							- decoder: 다시 64x64 패치로 복원<br>
+							<li>Autoencoder with nonlinear(PReLU) dimensional reduction</li>
+							- encoder: 64x64 패치를 PReLU activation function을 통해 4x4로 차원 축소하여 특징 추출<br>
+							- decoder: 다시 64x64 패치로 복원<br>
+							<li>Autoencoder based on Deep CNN</li>
+							- encoder: 이미지의 공간정보를 담고있는 CNN을 기반으로 특징 추출<br>
+							- decoder: transpose하여 다시 64x64 패치로 복원<br>
+							- activation function으로 tanh, Sigmoid를 시도(Sigmoid 선택)<br>
 						</ul>
+						<br>
+						
+						<h4>평가 지표</h4>
+						<p>
+						제조업 데이터의 특성상, 실제로는 결함이지만 정상이라고 잘못 분류한 사례(FP)를 최소화하는 것이 <br>
+						전체적인 정확도를 높이는 것보다 중요하다. <br>
+						
+						따라서 precision과 recall를 모두 고려하는 f1-score를 평가 지표로 선택했다.
+						</p>
 
-						<g class="icon brands fa-github"><span class="label">GitHub</span></g>
-						<p>code: <a href="https://github.com/2hyes/Fabric-Defect-Detector" >GitHub</a></p>
-
+						<h4>Future Job</h4>
+						<ul>
+							<li>추가적인 데이터 수집을 통해 Fabric 종류별 특징 추출을 하고자 한다. </li>
+							<li>real world와 비슷한 상황을 위해, data augmentation을 통해 정상 데이터 수를 늘려보고자 한다.</li> 
+							<li>Autoencoder 모델 자체의 성능 한계로 인한 어려움을 겪었다. VAE등의 더 발전된 모델을 활용하고자 한다. </li>
+						</ul>
 				</article>
 
 				<br><br>
 				
 				<article id="cli">
-               		<h3>3. Project: 부정적 경제 키워드를 포함한 뉴스기사 수와 포털 트렌드 검색량을 활용한 주간 소비자 심리 지수 개발</h3>
-                
+               		<h3>3. Project: 뉴스기사 수와 포털 트렌드를 활용한 주간 소비자 심리 지수 개발</h3>
+					   <p><i>2020.09 ~ </i>진행중  <a href="https://github.com/2hyes/CLI-development" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
+						불경기 상황에서 경제 정책 시행에의 빠른 피드백과 탄력적 대응을 위한 단기 경제지표를 제시</p>
+						
+						주간 데이터들을 수집하여, 월간 경제 지표인 소비자심리지수를 예측한다.<br>
+						예측 모델에 주간 레코드들을 집어넣어, 주간 경제 지표 값들을 내도록 한다.
+
+						<h4>데이터 수집 과정</h4>
+						<ul>
+							<li><p>부정적 경제 상황 키워드를 포함하는 뉴스 기사 수<br>
+								: 빅카인즈에서 json 파일 다운로드
+							</p></li>
+							<li><p>포털 트렌드의 '경제' 검색량 비율<br>
+								- 구글: 구글 트렌드에서 csv 파일 다운로드<br>
+								- 네이버: 네이버 데이터랩 openAPI 활용<br>
+								- 카카오: 카카오 트렌드에서 excel 파일 다운로드<br> 
+							</p></li>
+							<li>소비자심리지수, 경기동행지수 순환변동치<br>
+								: 한국은행 경제통계시스템 API 활용
+							</li>	
+						</ul>
+						
 				</article>
-				<g class="icon brands fa-github"><span class="label">GitHub</span></g>
-				<p>code: <a href="https://github.com/2hyes/CLI-development" >GitHub</a></p>
 				<br><br>
 				
 				<article id="cyberattack">
 					<h3>4. Project: 사이버공격 패턴 사전 감지 프로그램</h3>
-									
+					<p><i>2020.08 ~ 2020.09 </i><a href="https://github.com/2hyes/security_ml" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
+					사이버 공격 로그 데이터(UNSW-NB15)로 인공신경망을 학습시켜, <br>
+					웹 서버를 통해 iOS앱으로 로그 정보에 대한 공격여부 및 공격 정보 예측 결과 시각화</p>
+					
+					<h4>데이터 전처리</h4>
+					<ul>
+						<li>범주형 변수 → 더미 변수</li>
+						<li>트레이닝데이터셋을 기준으로 정규화</li>
+					</ul>
+
+					<h4>모델링 과정</h4>
+					<ul>
+						<li>decision tree</li>
+						<li>MLP(인공신경망)</li>
+						<li>AdaBoost</li>
+						<li>SVC</li>
+						<li>GaussianNB</li>
+					</ul>
+					training accuracy = 0.85, test accuracy = 0.823<br>
+					activation ='relu’, solver = 'adam’, alpha = 1e-4, H = (70, 58, 77, 95, 57), max_iter=10000<br>
+					를 파라미터로 갖는 MLP를 최종 모델로 선택한다.<br>
+					선택된 모델을 Flask server에 배포하여, input 로그 데이터에 대해 예측 결과를 반환한다. 
 				</article>
-				<g class="icon brands fa-github"><span class="label">GitHub</span></g>
-				<p>code: <a href="https://github.com/2hyes/security_ml" >GitHub</a></p>
 				<br><br>
 								
 				<article id="titanic">
-                	<h3>5. Project: Kaggle titanic competition 참가</h3>
-                	gradient 활용한 logistic regression로 예측(1404 / 16274명)
+					<h3>5. Project: Kaggle titanic competition 참가</h3>
+					<a href="https://github.com/2hyes/kaggle_titanic" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
+								
+                	<p>gradient 활용한 logistic regression로 예측(1404 / 16274명)</p>
 				</article>
-				<g class="icon brands fa-github"><span class="label">GitHub</span></g>
-				<p>code: <a href="https://github.com/2hyes/kaggle_titanic" >GitHub</a></p>
 				<br><br>
 				
 				<article id="wine">
-                	<h3>6. Project: Wine data를 활용한 와인 품질 예측</h3>
+					<h3>6. Project: Wine data를 활용한 와인 품질 예측</h3>
+					<a href="https://github.com/2hyes/predict-wine-quality" ><g class="icon brands fa-github"><span class="label">GitHub</span></g></a>
+						
                 <p>decision tree, SVM, logistic regression, k-NN, clustering(k-means)</p>
 				</article>
-				<g class="icon brands fa-github"><span class="label">GitHub</span></g>
-				<p>code: <a href="https://github.com/2hyes/predict-wine-quality" >GitHub</a></p>
 				<br><br>
 				
 				<article id="edu"">
