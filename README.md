@@ -14,14 +14,15 @@ I have developed a **web** portfolio, with HTML & CSS -->
     * DATA SCIENCE 
         * The 17th SAS Analytics Championship **Certificate**
         * Project: Defect detection for image dataset 
-        * studying for ADsP
+        * Faculty internship in Department of Statistics of Sookmyung Women's University
+        * Project: Develop Weekly CLI with news counting and portal trends (proceeding)
         * Project: Cyber attack pattern detection
+        * Recommender System study organizer
+        * Graph-based algorithm study (proceeding)
         * Kaggle titanic competition (1404 / 16274)
         * Project: predicting wine quality 
     * DATABASE
-        * startup DB developer **internship**
-        * studying for SQLD
-    * CRAWLING
+        * startup engineering **internship**
     * SW education volunteer
         * Code Club KOREA 
         * CJ Olivenetworks 1st leader of CJ UNIT
@@ -48,14 +49,15 @@ HTML, CSS으로 웹 포트폴리오를 개발해보았습니다. -->
     * DATA SCIENCE 
         * 제 17회 SAS분석챔피언십 입선
         * 이미지 데이터셋을 이용한 결함감지 프로젝트
-        * ADsP(데이터분석준전문가) 자격증 준비
+        * 숙명여자대학교 통계학과 연구실 학부 인턴
+        * 뉴스기사 수와 포털 트렌드를 활용한 주간 소비자 심리 지수 개발
         * 사이버 공격 패턴 탐지 프로젝트
+        * 추천시스템 스터디 운영
+        * 그래프 논문 스터디 참여
         * Kaggle titanic competition 참가 (1404 / 16274명)
         * 와인 품질 예측 프로젝트
     * DATABASE
-        * 스타트업 DB개발자 인턴 근무
-        * SQLD(SQL개발자) 자격증 준비
-    * CRAWLING
+        * 스타트업 엔지니어링 인턴 근무
     * SW창의교육
         * 코드클럽 교육봉사단
         * CJ올리브네트웍스 CJ UNIT 1기 단장
